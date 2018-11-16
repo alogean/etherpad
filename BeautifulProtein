@@ -1,0 +1,154 @@
+This is a read only archive of pad.okfn.org. See the shutdown announcement for details.
+
+====================================================================================
+Beautiful Protein
+====================================================================================
+Protein Data Bank for generating pictures
+https://codepen.io
+
+
+
+Method 1: rotation of dihedral angles of aa in loops
+
+Pen 1 (5gto) https://codepen.io/alogean/pen/RjLarv
+Pen 2 (2zd8) https://codepen.io/alogean/pen/bYopLp
+Pen 3 (5gto) https://codepen.io/alogean/pen/qVPZxJ
+
+
+Method 2: decoy set (see http://titan.princeton.edu/2010-10-11/Decoys/)
+
+Pen 4 (4Q28)  https://codepen.io/alogean/pen/XzqRvm
+Pen 5 (1axf) https://codepen.io/alogean/pen/gXzRQE 
+
+native
+https://codepen.io/Eichenberger/full/JprEex/
+
+
+https://codepen.io/Eichenberger/full/JprEex/
+
+
+
+
+
+Pen 6 (1awd) https://codepen.io/alogean/pen/POeKoM
+
+
+Method 3: Atom shift (comparison not yet implemented)
+
+Native conformation  http://codepen.io/alogean/live/PbZbPK
+Decoy conformation http://codepen.io/alogean/live/rWxMoQ
+
+
+
+
+Method 1 : 
+    
+live demo
+https://codepen.io/alogean/live/GMNNXW
+editor view 
+https://codepen.io/alogean/pen/GMNNXW
+
+
+Native vs Decoy conformations of the protein 1e7g 
+
+https://threejs.org/examples/#webgl_lines_splines
+
+Infography about protein structure
+https://www.google.ch/search?q=protein+structure+determination+infographic&safe=strict&client=firefox-b-ab&source=lnms&tbm=isch&sa=X&ved=0ahUKEwiqyIO7q7nVAhVHvRQKHZZFB0EQ_AUICigB&biw=1920&bih=899#imgrc=p-4wRIQwzc7fVM:
+
+Corruption protocols
+
+Method 1 (as shown last time)
+a random value (from 1 to 5 angstrom) is added to all C-alpha cartesian coordinates on one axe (x, y or z)
+see here:
+Native conformation  http://codepen.io/alogean/live/PbZbPK
+Decoy conformation http://codepen.io/alogean/live/rWxMoQ
+a variation could be to do the same but this time chosing also randomly the dimensions
+
+Method 2
+use a the PDBviewer to modify the structure
+rule set 1
+select in the middle of each loop an amino acid
+rotate the dihedral angle of on increment right
+repeat it for each loop
+rule set 2
+select in the middle of each loop an amino acid
+rotate the dihedral angle of one increment right
+repeat it for the next loop but this turn left (alternate right left)
+rule set 3
+select in the middle of each loop an amino acid
+rotate the dihedral angle of two increment right
+repeat it for the next loop
+rule set 4
+as 2 but with 2 increment
+rule set 5
+as for 1 but only loops that are bigger than 10 aa
+rule set 6
+select only loop that are bigger as 10 aa and select then 2 amino acid in the loop 
+
+Method 3
+Threading method : take an other protein with the same length, and mutate all amino acid to the original one
+
+
+    
+
+
+
+
+
+About conformation that are "physicaly impossibles"
+The best way to describe this is to use probability and potential energy: at room temperature, in water there are conformations that are "possibles" but so high in energy that the probability to find them is extremelly low. So "physicaly impossible" should be replaced by "very unlikelly" because so high in energy.  
+
+Protein selection
+There are many ways to classify proteins: 
+by function
+by size
+by shape
+by complexity
+...
+see here http://mm.rcsb.org/
+    
+Existing Decoy Dets 
+Titan High resolution decoy set
+http://titan.princeton.edu/2010-10-11/Decoys/
+Tasser Set II
+structurally non-redundant set of protein structures and decoys derived with the program TASSER.
+http://zhanglab.ccmb.med.umich.edu/decoys/
+Decoy sets from the Decoys ‘R’ us repository 
+http://dd.compbio.washington.edu
+Different decoy Rosetta-based decoy sets
+http://depts.washington.edu/bakerpg/decoys/
+Collection of models from the successive CASP5 to CASP9 experiments
+http://predictioncenter.org
+The Stage_1 and Stage_2 decoy sets used in the CASP10 quality assessment category
+http://predictioncenter.org
+
+Prototype
+http://codepen.io/alogean/full/BjBPgN/
+
+
+
+Vielen Dank für die Angaben.
+
+
+Was ich zuerst brauche, sind schlicht 10 Darstellungen von Proteinen z. B. auf einem Pdf-Dokument als Bilder, so dass die Leute sehen, wie können Proteine aussehen. Die Proteine sollten im gleichen Modus dargestellt sein, wie du verwendet hast für die Ausstellung in schwarz-weiss. Unten dran der Link, wo man das jeweilige Protein findet.  Kannst du mir das mailen oder in einen Dropbox-Ordner stellen?
+Gut. Das geht für mich unter protein selection. Ich werde selbst die selection Kriterien bestimmen und 10 Stücken auswählen
+
+Was ich auch nicht auf Anhieb finde. Wie kann ich die Proteine im Darstellungsmodus anschauen, den du für die Ausstellung verwendet hast, ebenso die Decoy Sets?
+Probiere mal das : https://biasmv.github.io/pv/demo.html oder das http://webglmol.osdn.jp/glmol/viewer.html  
+Danke, das Zweite ist, was ich gesucht habe.
+
+Kennst du einen Proteinforscher, der sich interessieren würde, an einem solchen Experiment mitzumachen? Der könnte dann all die Faktoren bearbeiten, die du im ersten Abschnitt erwähnst (physically impossibles usw). Im moment geht das noch viel zu weit. Es geht in erster Linie um das Visulle. Wie sieht das aus. Die Fragen zu Struktur kommen erst später.
+Mark Gasser vieleicht. Er hat sein Phd in molecular modeling gemacht mit mir, arbeitet jetzt in den Paul Scherer Institute und zeichnet selbst. 
+
+Kann hier auch eine dritte Person mitschreiben und lesen?
+ja unendlich viel solang den server die Loading erträgt ...
+
+Faltung und Energie
+Noch eine Frage: Wenn du von "so high in energy" das es "highly unlikely" ist, sprichst - heisst das, dass es sehr viel Energie braucht, um ein Protein in diese Faltung zu bringen? Und heisst das umgekehrt, dass die Faltungen, die in der Natur tatsächlich vorkommen, sich so fallten, wie es am wenigsten Energeie braucht, um zur endgülten Form zu kommen?
+
+
+
+
+
+
